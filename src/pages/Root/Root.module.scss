@@ -1,0 +1,54 @@
+@import 'scss/_main.scss';
+
+.navBar {
+  width: 100vw;
+  color: $navbar-color;
+  background-color: $navbar-bg-color;
+  padding: 0.3em;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.linkName {
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+.linkName::after {
+  content: ' | '
+}
+
+.linkName:last-child::after {
+  content: ''
+}
+
+.loginForm {
+  display: block;
+  float: right;
+
+  button[type="button"] {
+    border: 1px solid $navbar-color;
+    background: $navbar-bg-color;
+    color: $navbar-color;
+    margin-left: 0.3rem;
+  }
+}
+
+.loggedIn {
+  display: block;
+  float: right;
+  position: relative;
+  left: -7rem;
+
+  img {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    top: -2rem;
+    border-radius: 2.5rem;
+    border: 2px solid white;
+  }
+}

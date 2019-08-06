@@ -1,0 +1,13 @@
+@import 'scss/_main.scss';
+
+.loginForm {
+  display: block;
+  float: right;
+
+  button[type="button"] {
+    border: 1px solid $navbar-color;
+    background: $navbar-bg-color;
+    color: $navbar-color;
+    margin-left: 0.3rem;
+  }
+}

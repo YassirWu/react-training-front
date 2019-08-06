@@ -21,7 +21,9 @@ module.exports = {
     'react'
   ],
   rules: {
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "eslint-plugin-import": 0,
+    "import/no-unresolved": 0,
   },
   settings: {
     "import/resolver": {

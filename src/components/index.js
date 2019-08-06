@@ -8,3 +8,4 @@ export { default as LabeledInput } from './molecules/LabeledInput';
 
 // organisms
 export { default as FormField } from './organisms/FormField';
+export { default as LoginForm } from './organisms/LoginForm';

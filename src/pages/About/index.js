@@ -1,9 +1,1 @@
-import React from 'react';
-
-import { Button } from 'components';
-
-const myPage = () => (
-  <Button />
-);
-
-export default myPage;
+export { default } from './About.design';

@@ -1,15 +1,26 @@
 import React from 'react';
 
 import 'scss/_main.scss';
-import { Header } from 'components';
+
+// Redux
 import { Provider } from 'react-redux';
-import store from './domain';
+
+// Routing
+import { BrowserRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+
+// Routes definitions
+import routes from 'routes';
+
+// Redux Store
+import store from 'domains';
 
 const App = () => (
-  <Provider store={store}>
-    <Header>The three eyed raven&apos;s lair</Header>
-    Welcome !
-  </Provider>
+  <BrowserRouter>
+    <Provider store={store}>
+      {renderRoutes(routes)}
+    </Provider>
+  </BrowserRouter>
 );
 
 export default App;
