@@ -1,2 +1,4 @@
-src/*.test.js
+src/**/*.test.js
+src/**/*.test.jsx
+src/**/*.stories.jsx
 src/serviceWorker.js

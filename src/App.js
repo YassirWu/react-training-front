@@ -1,11 +1,15 @@
 import React from 'react';
-import style from './App.module.css';
-// import './App.css';
+
+import 'scss/_main.scss';
+import { Header } from 'components';
+import { Provider } from 'react-redux';
+import store from './domain';
 
 const App = () => (
-  <div className={style.App}>
-    Hello world !
-  </div>
+  <Provider store={store}>
+    <Header>The three eyed raven&apos;s lair</Header>
+    Welcome !
+  </Provider>
 );
 
 export default App;
