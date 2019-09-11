@@ -20,7 +20,6 @@ export function* authUserSaga({ payload: { email, password } }) {
 
     // @ts-ignore
     const auth = yield axios(axiosAuthRequest);
-    debugger;
     yield put(authenticateUserSuccess(auth.data));
   } catch (error) {
     yield put(authenticateUserFailure(error));

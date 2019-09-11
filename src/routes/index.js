@@ -5,6 +5,7 @@ import aboutRoute from './about.route';
 import notFoundRoute from './notfound.route';
 import profileRoute from './profile.route';
 import booksRoute from './books.route';
+import bookDetails from './bookDetails.route';
 
 const routes = [
   {
@@ -14,6 +15,7 @@ const routes = [
       aboutRoute,
       profileRoute,
       booksRoute,
+      bookDetails,
       notFoundRoute,
     ],
   },

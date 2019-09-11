@@ -1,6 +1,7 @@
 export { default as Home } from './Home';
 export { default as About } from './About';
 export { default as Books } from './Books';
+export { default as BookDetails } from './BookDetails';
 export { default as Profile } from './Profile';
 export { default as NotFound } from './NotFound';
 export { default as Root } from './Root';
