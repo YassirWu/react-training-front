@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__previous {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  &__next {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  &__disabled {
+    color: #b7b6b6;
+    cursor: default;
+  }
+
+  &__page {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__active {
+    color: #37474f;
+    cursor: default;
+    font-weight: 700;
+  }
+}

@@ -21,4 +21,6 @@ const routes = [
   },
 ];
 
+export { getBookDetailRouteUrl } from './bookDetails.route';
+
 export default routes;

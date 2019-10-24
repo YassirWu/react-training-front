@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .panel {
@@ -29,4 +30,12 @@
   flex-direction: column;
   text-align: center;
   line-height: 1.5rem;
+}
+
+.listCharacters {
+  padding-top: 15px;
+}
+
+.titleCharacters {
+  margin-bottom: 15px;
 }
