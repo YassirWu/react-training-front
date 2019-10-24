@@ -13,3 +13,10 @@ export const getBookByIdSelector = createSelector(
   [bookByIdSelector],
   book => book,
 );
+
+export const charactersSelector = state => state.characters;
+
+export const getCharactersSelector = createSelector(
+  [charactersSelector],
+  characters => characters,
+);

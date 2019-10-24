@@ -6,7 +6,7 @@ import { call, all } from 'redux-saga/effects';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import auth, { authSaga } from './auth';
-import books, { booksSaga } from './books';
+import { booksSaga, booksReducer, charactersSaga, charactersReducer } from './books';
 import user, { userSaga } from './user';
 import comments from './comments';
 
@@ -16,7 +16,8 @@ const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
   user,
-  books,
+  books: booksReducer,
+  characters: charactersReducer,
   comments,
   auth,
 });
@@ -25,6 +26,7 @@ const rootSaga = function* rootSaga() {
   yield all([
     call(userSaga),
     call(booksSaga),
+    call(charactersSaga),
     call(authSaga),
   ]);
 };

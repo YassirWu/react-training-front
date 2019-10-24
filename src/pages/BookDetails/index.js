@@ -1,7 +1,7 @@
 import { compose, lifecycle } from 'recompose';
 import { withRouter } from 'react-router-dom';
 
-import Books from './BookDetails.design';
+import BookDetails from './BookDetails.design';
 import withConnect from './withConnect';
 
 export default compose(
@@ -12,4 +12,4 @@ export default compose(
       this.props.fetchBooks();
     },
   }),
-)(Books);
+)(BookDetails);

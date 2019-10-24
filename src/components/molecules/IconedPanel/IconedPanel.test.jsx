@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Panel from './Panel.design';
+import Panel from './IconedPanel.design';
 
 let shallowPanel;
 

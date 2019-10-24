@@ -3,61 +3,52 @@ import t from 'prop-types';
 
 import styles from './List.module.scss';
 
-const BookLine = ({
-  bookId, name, numberOfPages, released,
-  povCharacters, characters,
-}) => (
-  <tr key={bookId}>
-    <td>{name}</td>
-    <td>{numberOfPages}</td>
-    <td>{released}</td>
-    <td>{povCharacters}</td>
-    <td>{characters}</td>
+export const ListBodyLine = ({ id, children }) => (
+  <tr key={id}>
+    {children}
   </tr>
 );
+ListBodyLine.propTypes = {
+  id: t.number.isRequired,
+  children: t.node.isRequired,
+};
 
-const renderListLines = book => (
-  <BookLine
-    bookId={book.name}
-    name={book.name}
-    numberOfPages={book.numberOfPages}
-    released={book.released}
-    povCharacters={book.povCharacters.length}
-    characters={book.characters.length}
-  />
+export const ListHeader = ({ children }) => (
+  <thead>
+    {children}
+  </thead>
 );
+ListHeader.propTypes = {
+  children: t.node.isRequired,
+};
 
-const List = ({ books }) => (
-  <table className={styles.listTable}>
-    <thead>
-      <th>Book</th>
-      <th>Nb of pages</th>
-      <th>Release date</th>
-      <th>Pov characters</th>
-      <th>Nb of characters</th>
-    </thead>
-    <tbody>
-      {
-        books.map(renderListLines)
-      }
-    </tbody>
-  </table>
+export const ListBody = ({ children }) => (
+  <tbody>
+    {children}
+  </tbody>
 );
+ListBody.propTypes = {
+  children: t.node.isRequired,
+};
 
-List.defaultProps = {
-  books: [],
+const List = ({ children, className }) => {
+  const [header, body] = React.Children.toArray(children);
+
+  return (
+    <table className={`${styles.listTable} ${className}`}>
+      {header}
+      {body}
+    </table>
+  );
 };
 
 List.propTypes = {
-  books: t.arrayOf(
-    t.shape({
-      name: t.string.isRequired,
-      numberOfPages: t.number.isRequired,
-      released: t.string.isRequired,
-      povCharacters: t.arrayOf(t.string.isRequired),
-      characters: t.arrayOf(t.string.isRequired),
-    }),
-  ),
+  children: t.node.isRequired,
+  className: t.string,
 };
+
+List.defaultProps = {
+  className: '',
+}
 
 export default List;
